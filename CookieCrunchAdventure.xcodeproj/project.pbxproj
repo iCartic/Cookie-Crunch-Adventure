@@ -100,7 +100,7 @@
 		104BECEB1AD590F90035A7EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		104BECF41AD5966C0035A7EA /* CookieCrunchAdventure-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookieCrunchAdventure-Bridging-Header.h"; sourceTree = "<group>"; };
 		104BECF91AD5B1590035A7EA /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		DF966AD51C595AF10093662C /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Skillz.framework; sourceTree = "<group>"; };
+		DF966AD51C595AF10093662C /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Skillz.framework; path = ../Skillz.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,6 @@
 		104BEC8A1AD567910035A7EA = {
 			isa = PBXGroup;
 			children = (
-				DF966AD51C595AF10093662C /* Skillz.framework */,
 				104BECCD1AD56B100035A7EA /* Levels */,
 				104BECCB1AD56AF60035A7EA /* Grid.atlas */,
 				104BECBE1AD568780035A7EA /* Sounds */,
@@ -157,6 +156,7 @@
 				104BECE21AD57BD50035A7EA /* Extensions.swift */,
 				104BECA31AD567910035A7EA /* Images.xcassets */,
 				104BECA51AD567910035A7EA /* LaunchScreen.xib */,
+				DF966AD51C595AF10093662C /* Skillz.framework */,
 				104BEC961AD567910035A7EA /* Supporting Files */,
 				104BECF41AD5966C0035A7EA /* CookieCrunchAdventure-Bridging-Header.h */,
 			);
