@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u7t-8b-W4m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StartVC-->
+        <scene sceneID="A58-WC-clI">
+            <objects>
+                <viewController storyboardIdentifier="StartVC" id="u7t-8b-W4m" customClass="StartVC" customModule="CookieCrunch" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfH-mg-edj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-Sb-KVe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-GR-i2p">
+                                <rect key="frame" x="16" y="450" width="343" height="120"/>
+                                <color key="backgroundColor" red="0.67770993709564209" green="0.83999085426330566" blue="0.58427298069000244" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Fcw-OM-WbQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="37"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTouch:" destination="u7t-8b-W4m" eventType="touchUpInside" id="eiF-Ix-EvG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OYo-Sb-KVe" firstAttribute="top" secondItem="bSY-65-Xep" secondAttribute="top" id="HnU-xZ-3xm"/>
+                            <constraint firstItem="Nek-GR-i2p" firstAttribute="top" secondItem="bSY-65-Xep" secondAttribute="top" constant="430" id="K7F-Mb-P1i"/>
+                            <constraint firstItem="Nek-GR-i2p" firstAttribute="leading" secondItem="bSY-65-Xep" secondAttribute="leading" constant="16" id="LTh-i3-zEG"/>
+                            <constraint firstItem="bSY-65-Xep" firstAttribute="trailing" secondItem="OYo-Sb-KVe" secondAttribute="trailing" id="Mf4-vE-dmz"/>
+                            <constraint firstItem="OYo-Sb-KVe" firstAttribute="leading" secondItem="bSY-65-Xep" secondAttribute="leading" id="b84-Im-CVp"/>
+                            <constraint firstItem="bSY-65-Xep" firstAttribute="bottom" secondItem="OYo-Sb-KVe" secondAttribute="bottom" id="fmL-70-N3G"/>
+                            <constraint firstItem="bSY-65-Xep" firstAttribute="trailing" secondItem="Nek-GR-i2p" secondAttribute="trailing" constant="16" id="t1p-uP-Qx0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bSY-65-Xep"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="Nek-GR-i2p" id="NO4-e4-9MS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgF-Iy-8if" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="114.69265367316342"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="CookieCrunch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-IS-WeP">
+                                <rect key="frame" x="8" y="40" width="359" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yet-4L-kfR">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEV-Un-kgw" userLabel="Target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRT-0p-IaC" userLabel="Target Label">
+                                                <rect key="frame" x="0.0" y="20" width="119.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-ot-dOi">
+                                        <rect key="frame" x="119.5" y="0.0" width="120" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6I-gAy" userLabel="Moves">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyL-yK-9Bz" userLabel="Moves Label">
+                                                <rect key="frame" x="0.0" y="20" width="120" height="24"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zco-TT-8yw">
+                                        <rect key="frame" x="239.5" y="0.0" width="119.5" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMr-1p-gwy" userLabel="Score">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-Xw-gRp" userLabel="Score Label">
+                                                <rect key="frame" x="0.0" y="20" width="119.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47027504280821919" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LJ4-Ff-cDr">
+                                <rect key="frame" x="0.0" y="173" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="7cO-VH-3YW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-sO-0hO">
+                                <rect key="frame" x="137.5" y="611" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="VFm-su-lWx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wNP-W8-BBF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="SHUFFLE" backgroundImage="Button">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Upk-dE-Sm2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-i4-oNV">
+                                <rect key="frame" x="299" y="617" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NBb-Sj-kXk"/>
+                                    <constraint firstAttribute="width" constant="60" id="mXr-XS-XMh"/>
+                                </constraints>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="quitButtonTouched:" destination="BV1-FR-VrT" eventType="touchUpInside" id="d2l-AB-k37"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XdD-IS-WeP" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="8" id="3iR-hv-t2n"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="dzj-sO-0hO" secondAttribute="bottom" constant="20" id="K5o-5R-D2u"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="VMc-i4-oNV" secondAttribute="trailing" constant="16" id="Lan-0C-wMm"/>
+                            <constraint firstItem="LJ4-Ff-cDr" firstAttribute="top" secondItem="XdD-IS-WeP" secondAttribute="bottom" constant="89" id="QeG-wA-Jag"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="XdD-IS-WeP" secondAttribute="trailing" constant="8" id="cig-tA-7Me"/>
+                            <constraint firstItem="dzj-sO-0hO" firstAttribute="centerX" secondItem="LJ4-Ff-cDr" secondAttribute="centerX" id="nPf-yX-WCR"/>
+                            <constraint firstItem="XdD-IS-WeP" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="uU7-it-a5y"/>
+                            <constraint firstItem="LJ4-Ff-cDr" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="wvO-Gk-XVI"/>
+                            <constraint firstItem="LJ4-Ff-cDr" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="zRd-Oc-7W0"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="VMc-i4-oNV" secondAttribute="bottom" constant="20" id="zm0-Kg-DFO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameOverPanel" destination="LJ4-Ff-cDr" id="FeW-ZQ-R25"/>
+                        <outlet property="movesLabel" destination="kyL-yK-9Bz" id="eFA-Nf-PX8"/>
+                        <outlet property="quitButton" destination="VMc-i4-oNV" id="tBW-Os-xPr"/>
+                        <outlet property="scoreLabel" destination="BOa-Xw-gRp" id="EE1-ZY-zQH"/>
+                        <outlet property="shuffleButton" destination="dzj-sO-0hO" id="zu6-27-f9N"/>
+                        <outlet property="targetLabel" destination="xRT-0p-IaC" id="hCt-gC-XKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="wim-s3-55r">
+                    <rect key="frame" x="0.0" y="0.0" width="52" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-9N-g11" userLabel="Target Label">
+                            <rect key="frame" x="0.0" y="0.0" width="52" height="19.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBe-AC-VW5" userLabel="Target">
+                            <rect key="frame" x="0.0" y="19.5" width="52" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="MWd-CX-VWZ"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="412" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="320" height="568"/>
+        <image name="Button" width="100" height="36"/>
+    </resources>
+</document>
